@@ -1,20 +1,47 @@
-import React from 'react'
+import React, { Component} from 'react'
 import Area from '../Area/index.jsx'
 import Description from '../Description/index.jsx'
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index.js';
 
-const Milestones = (props) => {
+class Milestones extends Component {
+    constructor() {
+        super()
+    }
 
-    let bk  = props.areaType == '23' ? 'blue_bk' : 'pink_bk';
-    return(
-        <section>
-            <div className={`row ${bk} justify-content-md-cetern`}>
-                <div className="col-12">
-                    <Area areaType={props.areaType}/>
-                    <Description areaType={props.areaType}/>
-                </div>
-            </div>
-        </section>
-    )
+    render(){
+        const { loading, tasks } = this.props
+        let bk  = tasks.id == '23' ? 'blue_bk' : 'pink_bk';
+
+            return(
+                <section>
+                    <div className={`row ${bk} justify-content-md-cetern`}>
+                        <div className="col-12">
+                            <Area areaType={tasks.id} />
+                            <Description title={tasks.title} description={tasks.description} />
+                        </div>
+                    </div>
+                </section>
+            )
+        }
 }
 
-export default Milestones;
+const mapStateToProps = state => {
+    return {
+        loading: state.results.loading,
+        tasks: state.results.task.data.skill
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        getResults: () => {
+         dispatch(actions.getResults());
+        }
+    };
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Milestones);

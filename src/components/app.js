@@ -1,14 +1,8 @@
 import React from "react";
-import Milestones from './Milestones/index.jsx'
-import "./app.scss";
+import Container from './container.js'
 
 const App = () => {
-  return (
-    <div className="container-fluid">
-      <Milestones areaType="23" />
-      {/* <Milestones areaType="2" /> */}
-    </div>
-  );
+  return (<Container />);
 };
 
 export default App;
