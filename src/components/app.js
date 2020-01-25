@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="container-fluid">
       <Milestones areaType="23" />
-      <Milestones areaType="2" />
+      {/* <Milestones areaType="2" /> */}
     </div>
   );
 };
