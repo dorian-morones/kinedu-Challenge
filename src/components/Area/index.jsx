@@ -5,7 +5,7 @@ const Area = (props) => {
     return(
         <div className="row justify-content-md-center">
             <div className="col-lg-10">
-                <h2 className="Secion_Title">Areas</h2>
+                <h3 className="Secion_Title">Areas</h3>
             </div>
             <div className="col-lg-12">
                 <div className="row justify-content-md-center">
