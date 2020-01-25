@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700&display=swap');
+
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+section > div{
+    padding: 30px 0;
+}
+.line{
+    background: #fff;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.blue_bk{
+    background-color: #3aacdf;
+}
+
+.pink_bk{
+    background-color: #d54eb3;
+}
+.bk_mix_A{
+background: rgba(58,171,223,0);
+background: -moz-linear-gradient(left, rgba(58,171,223,0) 0%, rgba(58,171,223,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(58,171,223,0)), color-stop(50%, rgba(58,171,223,0)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(left, rgba(58,171,223,0) 0%, rgba(58,171,223,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(left, rgba(58,171,223,0) 0%, rgba(58,171,223,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(left, rgba(58,171,223,0) 0%, rgba(58,171,223,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to right, rgba(58,171,223,0) 0%, rgba(58,171,223,0) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', endColorstr='#ffffff', GradientType=1 );
+}
+.bk_mix_B{
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(58,171,223,0) 50%, rgba(58,171,223,0) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(50%, rgba(58,171,223,0)), color-stop(100%, rgba(58,171,223,0)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(58,171,223,0) 50%, rgba(58,171,223,0) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(58,171,223,0) 50%, rgba(58,171,223,0) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(58,171,223,0) 50%, rgba(58,171,223,0) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(58,171,223,0) 50%, rgba(58,171,223,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3aabdf', GradientType=1 );
+}
+.bk_mix_A p:last-child{
+    color: #3aacdf;
+}
+.bk_mix_B p:first-child{
+    color: #d54eb3;
+}
+
+.Secion_Title{
+    text-align: center;
+    color: #fff;
+}
+.Section_Type{
+    text-align: center;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+}
+.Section_Type p{
+    text-align: center;
+    width: 50%;
+    display: block;
+    float: left;
+    margin: 0;
+    font-weight: 600;
+}
+.Skill_Title{
+    text-align: center;
+    color: #fff;
+}
+.Skill_Description{
+    text-align: center;
+    color: #fff;
+}
