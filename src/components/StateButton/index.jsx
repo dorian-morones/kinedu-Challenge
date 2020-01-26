@@ -16,14 +16,18 @@ class StateButton extends Component {
     }
 
     render(){
-        const { loading, tasks } = this.props
-        let text = tasks.skill.id === 23 ? 'Next' : 'Prev'
+        const { answers, tasks } = this.props
+        let text = tasks.skill.id === 23 ? 'Next' : 'Complete'
+        let max = tasks.skill.id === 23 ? answers.length/2 : (answers.length - 20) / 2 
+        let disabled = tasks.skill.milestones.length === max ? false : true
 
+        console.log(tasks.skill.milestones.length)
+        console.log( answers.length)
         return(
             <section>
                 <div className="row justify-content-md-center">
                     <div className="col-12">
-                        <button className="btn stateButton" onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
+                        <button className={`btn stateButton`} disabled={disabled} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
                     </div>
                 </div>
             </section>
@@ -33,7 +37,8 @@ class StateButton extends Component {
 
 const mapStateToProps = state => {
     return {
-        tasks: state.results.task.data
+        tasks: state.results.task.data,
+        answers: state.results.answers
     };
 };
 
