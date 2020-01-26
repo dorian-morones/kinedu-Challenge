@@ -9,20 +9,22 @@ class StateButton extends Component {
         this.handlerState = this.handlerState.bind(this)
     }
 
-    handlerState(e){
+    handlerState(e, id){
         e.preventDefault();
-        console.log('click')
-        this.props.getResults('../../../data/skills_2.json')
+        console.log('click', id)
+        let skills = id === 23 ? '../../../data/skills_2.json' : '../../../data/skills_23.json'
+        this.props.getResults(skills)
     }
 
     render(){
         const { loading, tasks } = this.props
-        
+        let text = tasks.skill.id === 23 ? 'Next' : 'Prev'
+
         return(
             <section>
                 <div className="row justify-content-md-center">
                     <div className="col-12">
-                        <button className="btn stateButton" onClick={e => this.handlerState(e)}>Next</button>
+                        <button className="btn stateButton" onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
                     </div>
                 </div>
             </section>

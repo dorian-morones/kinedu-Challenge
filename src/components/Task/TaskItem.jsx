@@ -1,7 +1,6 @@
 import React,{Fragment} from 'react'
 
 const TaskItem = (props) => {
-    console.log('TaskItem', props)
     return(
         <Fragment>
             <div className="row Task_Item">
