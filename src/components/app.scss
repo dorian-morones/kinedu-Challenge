@@ -74,3 +74,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     text-align: center;
     color: #fff;
 }
+
+// TASKS
+.Task_Item{
+    border-bottom: solid 1px #f3eef0;
+    padding: 30px 80px;
+    color: #657480;
+}
+.btn{
+    border-radius: 100px;
+    font-weight: 600;
+    border: none;
+    margin: 0 auto;
+    display: block;
+}
+.btn_notAnswered{
+    background-color: #f3eef0;
+    padding: 10px 20px;
+    color: #657480;
+}
+.btn_uncompleted{
+    background-color: #f3eef0;
+    padding: 10px 20px;
+    color: #75b753;
+}
+.btn_completed{
+    background-color: #75b753;
+    padding: 10px 20px;
+    color: #f3eef0;
+}
