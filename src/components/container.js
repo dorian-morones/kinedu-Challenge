@@ -1,6 +1,7 @@
 import React, {Component,Fragment } from 'react'
 import Milestones from './Milestones/index.jsx'
 import Task from './Task/index.jsx'
+import StateButton from './StateButton/index.jsx'
 import "./app.scss";
 import { connect } from 'react-redux';
 
@@ -18,6 +19,7 @@ class Container extends Component {
                         <Fragment>
                             <Milestones />
                             <Task />
+                            <StateButton />
                         </Fragment>
                     :
                         <p>Loading...</p> 
