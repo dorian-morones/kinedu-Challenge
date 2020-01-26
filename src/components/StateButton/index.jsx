@@ -11,7 +11,6 @@ class StateButton extends Component {
 
     handlerState(e, id){
         e.preventDefault();
-        console.log('click', id)
         let skills = id === 23 ? '../../../data/skills_2.json' : '../../../data/skills_23.json'
         this.props.getResults(skills)
     }

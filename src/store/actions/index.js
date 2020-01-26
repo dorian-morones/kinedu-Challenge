@@ -1,1 +1,1 @@
-export { getResults, loadingResults, receiveResults } from './results';
+export { getResults, loadingResults, receiveResults, saveAnswers } from './results';

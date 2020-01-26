@@ -1,43 +1,59 @@
 import React,{Component, Fragment} from 'react'
-
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index.js';
+import { saveAnswers } from '../../utils/saveAnswers.js'
 class TaskItem extends Component {
     constructor(props) {
         super(props)
         this.state ={
-            buttonState: "NA",
-            buttonText: 'Not answered',
-            buttonClass: 'btn_notAnswered'
+            buttonState: props.answer,
+            buttonText: props.buttonText,
+            buttonClass: props.buttonClass,
         }
-        this.handlerButtonState = this.handlerButtonState.bind(this);
-
+        this.handlerSaveState = this.handlerSaveState.bind(this);
+        this.handleStateItem = this.handleStateItem.bind(this);
     }
 
-    handlerButtonState(e){
-        console.log('click')
+    handlerSaveState(e, id){
+        let state = this.handleStateItem(id, this.state.buttonState);
+        let answeredItems = saveAnswers(id, state); //create new array with the answered item
+        this.props.saveAnswers(answeredItems);
         switch (this.state.buttonState) {
-            case 'NA':
-                console.log('click',this.state.buttonState)
-                this.setState({buttonState: false, buttonText: 'Uncompleted', buttonClass: 'btn_uncompleted'})
+            case null:
+                this.setState({ buttonText: 'Uncompleted', buttonClass: 'btn_uncompleted'})
               break;
               case false:
-                console.log('click',this.state.buttonState)
-                this.setState({buttonState: true, buttonText: 'Completed', buttonClass: 'btn_completed'})
+                this.setState({ buttonText: 'Completed', buttonClass: 'btn_completed'})
               break;
               case true:
-                console.log('click',this.state.buttonState)
-                this.setState({buttonState: false, buttonText: 'Uncompleted', buttonClass: 'btn_uncompleted'})
+                this.setState({ buttonText: 'Uncompleted', buttonClass: 'btn_uncompleted'})
               break;
             default:
               break;
           }
+    }
 
+    handleStateItem(id, state){
+        let answerItems = this.props.answers;
+        let saved = false;
+        answerItems.forEach(item => {
+            id === item.id ? saved = true : null
+       })
+
+        if(state === null && saved === false){
+            this.setState({buttonState: false})
+        }else if(state === false && saved === true){
+            this.setState({buttonState: true})
+        }else if(state === true && saved === true){
+            this.setState({buttonState: false})
+        }
+        return saved
     }
 
 
     render(){
-        const { title, age_range } = this.props
-        
-        let titleState = this.state.buttonText;
+        const { id, title, age_range, answer } = this.props
+        let titleState = this.props.buttonText;
 
         return(
             <Fragment>
@@ -47,7 +63,7 @@ class TaskItem extends Component {
                         <h6>usually achieved by: {age_range} months</h6>
                     </div>
                     <div className="col-3">
-                        <button className={`btn ${this.state.buttonClass}`} onClick={e => this.handlerButtonState(e)}>{titleState}</button>
+                        <button className={`btn ${this.props.buttonClass}`} onClick={e => this.handlerSaveState(e, id)}>{titleState}</button>
                     </div>
                 </div>
             </Fragment>
@@ -56,4 +72,20 @@ class TaskItem extends Component {
 }    
 
 
-export default TaskItem;
+const mapStateToProps = state => {
+    return {
+        tasks: state.results.task.data,
+        answers: state.results.answers
+    };
+};
+const mapDispatchToProps = dispatch => {
+    return {
+        saveAnswers: (items) => {
+         dispatch(actions.saveAnswers(items));
+        }
+    };
+};
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(TaskItem);

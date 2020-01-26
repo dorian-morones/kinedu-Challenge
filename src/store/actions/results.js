@@ -17,6 +17,13 @@ export const receiveResults = data => {
     };
   };
 
+export const saveAnswers = items => {
+  return{
+    type: actionTypes.SAVE_ANSWERS,
+    payload: items
+  }
+}
+
 export const getResults = (skills) => {
     const url = skills; 
     return function (dispatch) {
