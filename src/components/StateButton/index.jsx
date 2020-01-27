@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index.js';
-
+import ModalComponent from '../Modal/index.jsx'
 class StateButton extends Component {
     constructor(props) {
         super(props)
@@ -17,9 +17,9 @@ class StateButton extends Component {
 
     render(){
         const { answers, tasks } = this.props
-        let text = tasks.skill.id === 23 ? 'Next' : 'Complete'
+        let text = tasks.skill.id === 23 ? 'Next' : 'Prev'
         let max = tasks.skill.id === 23 ? answers.length/2 : (answers.length - 20) / 2 
-        let disabled = tasks.skill.milestones.length === max ? false : true
+        let disabled = tasks.skill.milestones.length / 2 < answers.length / 2 ? false : true
 
         console.log(tasks.skill.milestones.length)
         console.log( answers.length)
@@ -27,7 +27,18 @@ class StateButton extends Component {
             <section>
                 <div className="row justify-content-md-center">
                     <div className="col-12">
-                        <button className={`btn stateButton`} disabled={disabled} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
+                        {
+                            tasks.skill.id === 23 ?
+                                <button className={`btn stateButton`} disabled={disabled} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
+                            :
+                            <Fragment>
+                                {(answers.length - 20) / 2  === tasks.skill.milestones.length ?
+                                    <ModalComponent max={(answers.length - 20) / 2} current={tasks.skill.milestones.length} />
+                                    :
+                                    <button className={`btn stateButton`} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
+                            }
+                            </Fragment>
+                            }
                     </div>
                 </div>
             </section>

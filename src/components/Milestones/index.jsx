@@ -17,7 +17,7 @@ class Milestones extends Component {
                 <section>
                     <div className={`row ${bk} justify-content-md-cetern`}>
                         <div className="col-12">
-                            <Area areaType={tasks.id} />
+                            <Area />
                             <Description title={tasks.title} description={tasks.description} />
                         </div>
                     </div>

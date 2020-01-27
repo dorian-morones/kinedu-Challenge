@@ -11,8 +11,11 @@ section > div{
     margin-top: 30px;
     margin-bottom: 40px;
 }
+.cta{
+    cursor: pointer;
+}
 .blue_bk{
-    background-color: #3aacdf;
+    background-color: #1FADDF;
 }
 
 .pink_bk{
@@ -39,7 +42,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#3aabdf', GradientType=1 );
 }
 .bk_mix_A p:last-child{
-    color: #3aacdf;
+    color: #1FADDF;
 }
 .bk_mix_B p:first-child{
     color: #d54eb3;
@@ -64,7 +67,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     float: left;
     margin: 0;
     font-weight: 600;
-    cursor: pointer;
 }
 .Skill_Title{
     text-align: center;
@@ -97,16 +99,35 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
 .btn_uncompleted{
     background-color: #f3eef0;
     padding: 10px 20px;
-    color: #75b753;
+    color: #75B753;
 }
 .btn_completed{
-    background-color: #75b753;
+    background-color: #75B753;
     padding: 10px 20px;
     color: #f3eef0;
 }
 .stateButton{
-    background-color: #75b753;
+    background-color: #75B753;
     padding: 10px 20px;
     color: #f3eef0;
     width: 300px;
+}
+
+.Modal_Title{
+    text-align: center;
+}
+.Modal_close{
+    background: none;
+    border:none;
+    font-weight: 600;
+    }
+.ReactModal__Overlay{
+   background-color: rgba(255, 255, 255, 0.6); 
+}
+.ReactModal__Content{
+    border: none !important;
+    padding: 50px !important;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.18);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.18);
 }
