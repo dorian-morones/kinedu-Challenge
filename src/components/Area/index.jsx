@@ -23,7 +23,7 @@ class Area extends Component {
         let ctaA =  tasks.skill.id == "23" ? "" : "cta"
         let ctaB =  tasks.skill.id == "2" ? "" : "cta"
         return(
-            <div className="row justify-content-md-center">
+            <div className="row justify-content-md-center fade1">
                 <div className="col-lg-10">
                     <h3 className="Secion_Title">Areas</h3>
                 </div>

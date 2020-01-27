@@ -48,7 +48,7 @@ class TaskItem extends Component {
 
         return(
             <Fragment>
-                <div className="row Task_Item">
+                <div className="row Task_Item fade1">
                     <div className="col-9">
                         <h4>{title}</h4>
                         <h6>{description}</h6>

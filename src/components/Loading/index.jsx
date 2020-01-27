@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div className="lds-ring">
+    <div className="lds-ring fade1">
       <div></div>
       <div></div>
       <div></div>

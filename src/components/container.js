@@ -11,7 +11,7 @@ class Container extends Component {
     }
     render(){
         const {loading} = this.props
-
+        
         return(
             <div className="container-fluid">
                 {
