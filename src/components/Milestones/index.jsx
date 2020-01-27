@@ -15,7 +15,7 @@ class Milestones extends Component {
 
             return(
                 <section>
-                    <div className={`row ${bk} justify-content-md-cetern`}>
+                    <div className={`row ${bk} justify-content-cetern`}>
                         <div className="col-12">
                             <Area />
                             <Description title={tasks.title} description={tasks.description} />

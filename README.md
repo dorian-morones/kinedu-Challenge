@@ -16,54 +16,53 @@
 ## Components structure
 
 ```
-
-└── src
+└──src
 |   index.js
 |   
-├── components
-|   ├── app.js
-|   ├── app.scss
-|   ├── container.js
+├──components
+|   ├──app.js
+|   ├──app.scss
+|   ├──container.js
 |   |   
 |   ├───Area
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   ├───Description
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   ├───Loading
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   ├───Milestones
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   ├───Modal
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   ├───StateButton
-|   |    └── index.jsx
+|   |    └──index.jsx
 |   |       
 |   └───Task
-|        ├── index.jsx
-|        └── TaskItem.jsx
+|        ├──index.jsx
+|        └──TaskItem.jsx
 |           
 ├───public
-|    └── index.html
+|    └──index.html
 |       
 ├───store
-|   |──── index.js
-|   |──── store-config.js
+|   |────index.js
+|   |────store-config.js
 |   |   
-|   ├─── actions
+|   ├───actions
 |   |       actionTypes.js
 |   |       index.js
 |   |       results.js
 |   |       
-|   └─── reducers
-|        ├─── index.js
-|        └─── results.js
+|   └───reducers
+|        ├───index.js
+|        └───results.js
 |           
 └───utils
-     ├─── saveAnswers.js
-     └─── validateItem.js
+     ├───saveAnswers.js
+     └───validateItem.js
 ```

@@ -23,18 +23,18 @@ class Area extends Component {
         let ctaA =  tasks.skill.id == "23" ? "" : "cta"
         let ctaB =  tasks.skill.id == "2" ? "" : "cta"
         return(
-            <div className="row justify-content-md-center fade1">
-                <div className="col-lg-10">
+            <div className="row justify-content-center fade1">
+                <div className="col-12 col-md-10 col-lg-10">
                     <h3 className="Secion_Title">Areas</h3>
                 </div>
-                <div className="col-lg-12">
-                    <div className="row justify-content-md-center">
-                        <div className={`col-3 ${titleBk} Section_Type`}>
+                <div className="col-12 col-md-12 col-lg-12">
+                    <div className="row justify-content-center">
+                        <div className={`col-10 col-md-3 col-lg-3 ${titleBk} Section_Type`}>
                             <p className={ctaA} onClick={ e => this.handlerState(e, 23, tasks.skill.id)}>Physical</p><p className={ctaB} onClick={ e => this.handlerState(e, 2, tasks.skill.id)}>Social & Emocional</p>
                         </div>
                     </div>
                 </div>
-                <div className="col-4 line"></div>
+                <div className="col-10 col-md-4 col-lg-4 line"></div>
 
             </div>
         )

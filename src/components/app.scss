@@ -59,6 +59,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     padding: 10px;
     font-size: 16px;
     border-radius: 20px;
+    display: flex;
 }
 .Section_Type p{
     text-align: center;
@@ -67,6 +68,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     float: left;
     margin: 0;
     font-weight: 600;
+    align-self: center;
 }
 .Skill_Title{
     text-align: center;
@@ -183,5 +185,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
     100% {
         opacity: 1;
         visibility: visible;
+    }
+  }
+
+
+  @media (max-width: 375px) {
+    .Task_Item {
+        padding: 30px 10px;
+    }
+    .Task_Item h4 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .Task_Item h6 {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    .Task_Item h6:last-child {
+        margin-bottom: 30px;
     }
   }

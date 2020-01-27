@@ -31,7 +31,7 @@ class Task extends Component {
         
         return(
             <section>
-                <div className="row justify-content-md-center">
+                <div className="row justify-content-center">
                     <div className="col-12">
                         {items}
                     </div>

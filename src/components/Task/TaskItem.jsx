@@ -49,12 +49,12 @@ class TaskItem extends Component {
         return(
             <Fragment>
                 <div className="row Task_Item fade1">
-                    <div className="col-9">
+                    <div className="col-12 col-md-9 col-lg-9">
                         <h4>{title}</h4>
                         <h6>{description}</h6>
                         <h6>usually achieved by: {age_range} months</h6>
                     </div>
-                    <div className="col-3">
+                    <div className="col-12 col-md-3 col-lg-3">
                         <button className={`btn ${this.props.buttonClass}`} onClick={e => this.handlerSaveState(e, id)}>{titleState}</button>
                     </div>
                 </div>
