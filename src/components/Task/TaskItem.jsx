@@ -23,11 +23,9 @@ class TaskItem extends Component {
     handleStateItem(id, state){
         let answerItems = this.props.answers; // all answered items
         let saved = false;
-        console.log('[saved 0]', saved + " - " + state)
         answerItems.forEach(item => {
             item.id === id ? saved = true : null
        })
-       console.log('[saved 1]', saved + " - " + state)
        let value = state === null || state === true ? false : true;
 
         if(state === null && saved === false){
@@ -40,8 +38,6 @@ class TaskItem extends Component {
             value == false;
             this.setState({buttonState: false});
         }
-        console.log('[saved 1]', value)
-
         return value
     }
 

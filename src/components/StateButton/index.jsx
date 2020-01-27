@@ -18,8 +18,9 @@ class StateButton extends Component {
     render(){
         const { answers, tasks } = this.props
         let text = tasks.skill.id === 23 ? 'Next' : 'Prev'
-        let max = tasks.skill.id === 23 ? answers.length/2 : (answers.length - 20) / 2 
-        let disabled = tasks.skill.milestones.length / 2 < answers.length / 2 ? false : true
+        let disabled = tasks.skill.milestones.length / 2 <= answers.length ? false : true
+        console.log("[milestones]", tasks.skill.milestones.length)
+        console.log("[answers]", answers.length)
 
         return(
             <section>
@@ -30,8 +31,8 @@ class StateButton extends Component {
                                 <button className={`btn stateButton`} disabled={disabled} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
                             :
                             <Fragment>
-                                {(answers.length - 20) / 2  === tasks.skill.milestones.length ?
-                                    <ModalComponent max={(answers.length - 20) / 2} current={tasks.skill.milestones.length} />
+                                {(answers.length - 10)  === tasks.skill.milestones.length ?
+                                    <ModalComponent max={(answers.length - 10)} current={tasks.skill.milestones.length} />
                                     :
                                     <button className={`btn stateButton`} onClick={e => this.handlerState(e, tasks.skill.id)}>{text}</button>
                             }
