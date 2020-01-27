@@ -52,7 +52,7 @@ class TaskItem extends Component {
 
 
     render(){
-        const { id, title, age_range, answer } = this.props
+        const { id, title, age_range, answer, description } = this.props
         let titleState = this.props.buttonText;
 
         return(
@@ -60,6 +60,7 @@ class TaskItem extends Component {
                 <div className="row Task_Item">
                     <div className="col-9">
                         <h4>{title}</h4>
+                        <h5>{description}</h5>
                         <h6>usually achieved by: {age_range} months</h6>
                     </div>
                     <div className="col-3">

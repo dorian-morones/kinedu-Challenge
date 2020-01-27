@@ -4,7 +4,7 @@ import Task from './Task/index.jsx'
 import StateButton from './StateButton/index.jsx'
 import "./app.scss";
 import { connect } from 'react-redux';
-
+import Loading from '../components/Loading/index.jsx'
 class Container extends Component {
     constructor() {
         super()
@@ -22,7 +22,7 @@ class Container extends Component {
                             <StateButton />
                         </Fragment>
                     :
-                        <p>Loading...</p> 
+                        <Loading />
                 }
             </div>
         )

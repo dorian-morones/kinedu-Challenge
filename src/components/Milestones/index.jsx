@@ -10,7 +10,7 @@ class Milestones extends Component {
     }
 
     render(){
-        const { loading, tasks } = this.props
+        const { tasks } = this.props
         let bk  = tasks.id == '23' ? 'blue_bk' : 'pink_bk';
 
             return(
@@ -28,7 +28,6 @@ class Milestones extends Component {
 
 const mapStateToProps = state => {
     return {
-        loading: state.results.loading,
         tasks: state.results.task.data.skill
     };
 };

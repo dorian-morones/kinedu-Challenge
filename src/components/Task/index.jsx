@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index.js';
 import TaskItem from './TaskItem.jsx'
 import { validateItemTitle, validateItemClass } from '../../utils/validateItem.js'
+import Loading from '../Loading/index.jsx'
 
 class Task extends Component {
     constructor(props) {
@@ -20,12 +21,13 @@ class Task extends Component {
                 key={index}
                 id={item.id}
                 title={item.title} 
+                description={item.description}
                 age_range={data.age_range}
                 answer={'dd'}
                 buttonClass={validateItemClass(item.id)}
                 buttonText={validateItemTitle(item.id)}
             />)
-        }) : <p>Loading...</p>
+        }) : <Loading />
         
         return(
             <section>
