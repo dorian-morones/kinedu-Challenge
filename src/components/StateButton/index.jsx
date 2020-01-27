@@ -21,8 +21,6 @@ class StateButton extends Component {
         let max = tasks.skill.id === 23 ? answers.length/2 : (answers.length - 20) / 2 
         let disabled = tasks.skill.milestones.length / 2 < answers.length / 2 ? false : true
 
-        console.log(tasks.skill.milestones.length)
-        console.log( answers.length)
         return(
             <section>
                 <div className="row justify-content-md-center">

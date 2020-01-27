@@ -23,7 +23,7 @@ class Task extends Component {
                 title={item.title} 
                 description={item.description}
                 age_range={data.age_range}
-                answer={'dd'}
+                answer={item.answer}
                 buttonClass={validateItemClass(item.id)}
                 buttonText={validateItemTitle(item.id)}
             />)
