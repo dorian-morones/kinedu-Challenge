@@ -165,11 +165,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3aabdf', end
   @keyframes lds-ring {
     0% {
       transform: rotate(0deg);
-      opacity: 0;
     }
     100% {
       transform: rotate(360deg);
-      opacity: 1;
     }
   }
 
